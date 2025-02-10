@@ -70,12 +70,12 @@ const useResque = (index: number) => {
         </button>
       </div>
       <div class="answerSelectorRow">
-        <button class="answerSelect" @click="clickSelect(1)" :class="{selected: btn == 1, correct: correct == 1}">A</button>
-        <button class="answerSelect" @click="clickSelect(2)" :class="{selected: btn == 2, correct: correct == 2}">B</button>
+        <button class="answerSelect a" @click="clickSelect(1)" :class="{selected: btn == 1, correct: correct == 1}">A</button>
+        <button class="answerSelect b" @click="clickSelect(2)" :class="{selected: btn == 2, correct: correct == 2}">B</button>
       </div>
       <div class="answerSelectorRow">
-        <button class="answerSelect" @click="clickSelect(3)" :class="{selected: btn == 3, correct: correct == 3}">C</button>
-        <button class="answerSelect" @click="clickSelect(4)" :class="{selected: btn == 4, correct: correct == 4}">D</button>
+        <button class="answerSelect c" @click="clickSelect(3)" :class="{selected: btn == 3, correct: correct == 3}">C</button>
+        <button class="answerSelect d" @click="clickSelect(4)" :class="{selected: btn == 4, correct: correct == 4}">D</button>
       </div>
 
       <div class="answerSelectorRow">
@@ -114,22 +114,43 @@ const useResque = (index: number) => {
 </template>
 
 <style scoped>
+.answerSelectorRow{
+  text-align: center;
+}
 .answerSelect{
-  height: 80px;
-  width: 80px;
-  margin: 0;
+  height: 60px;
+  width: 60px;
+  margin: 4px;
   padding: 0;
+  background-color: #00d0ff;
+}
+.a{
+  border-radius: 15px 15px 0 15px;
+}
+.b{
+  border-radius: 15px 15px 15px 0;
+}
+.c{
+  border-radius: 15px 0 15px 15px;
+}
+.d{
+  border-radius: 0 15px 15px 15px;
 }
 .answerSelectTripple{
   width: calc(160px / 3) !important;
   height: 65px;
+  border-radius: 7px;
 }
 .correct{
   background-color: #00D126 !important;
 }
 .answerSelectSingle {
-  height: 80px;
+  height: 60px;
   width: 160px;
+  border-radius: 15px;
+  background-color: #2C59BA;
+  color: white;
+  margin: 2px;
 }
 .selected {
   background-color: #FF9800;

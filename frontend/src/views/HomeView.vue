@@ -14,10 +14,41 @@ ws.webSocketConnection.on('startGame', (value) => {
 
 <template>
   <main>
-
+    <img src="/joltamp.png" alt="Joltamp.pl logo">
+    <div class="text">
+      <p>Powered by</p>
+      <h1>Joltamp.pl</h1>
+    </div>
   </main>
 </template>
 
 <style scoped>
-
+  img{
+    height:128px;
+    width:128px;
+  }
+  .text{
+    height: 128px;
+  }
+  p{
+    font-size: 24px;
+    color: #686868;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 15px;
+  }
+  h1{
+    font-size: 64px;
+    color: #686868;
+    margin: 0;
+    padding: 0;
+  }
+  main{
+    position:absolute;
+    left: 50px;
+    bottom: 50px;
+    display: flex;
+    gap: 15px;
+  }
 </style>
